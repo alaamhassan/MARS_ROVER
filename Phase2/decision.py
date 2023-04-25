@@ -122,7 +122,8 @@ def decision_step(Rover):
                     Rover.brake = 0
                     # Turn range is +/- 15 degrees, when stopped the next line will induce 4-wheel turning
                     #Rover.steer = -15 
-                    
+                    for a in range(1,int((Rover.yaw+360*2)/15)):                        
+                       Rover.steer=15
                  # If we're stopped but see sufficient navigable terrain in front then go!
                 if len(Rover.nav_angles) >= Rover.go_forward:
                     # Set throttle back to stored value
